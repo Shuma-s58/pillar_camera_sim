@@ -1,0 +1,15 @@
+pillar_camera_sim:
+  ros__parameters:
+    pillar_distance_x: 3.0       # 柱の奥行き（map X, m）
+    pillar_spacing: 0.66         # 柱の中心間隔（m）
+    pillar_width: 0.07           # 柱の太さ（m）
+    pillar_height: 1.65          # 柱の高さ（m）
+    camera_start_x: 0.0
+    camera_start_y: 0.0
+    camera_start_z: 0.9
+    camera_start_yaw: 0.0        # radians
+    move_step: 0.10              # 1キー入力の移動量（m）
+    yaw_step_deg: 5.0            # 1キー入力の回転量（度）
+    image_width: 800
+    image_height: 600
+    focal_length_px: 700.0
