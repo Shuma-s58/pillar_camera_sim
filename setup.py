@@ -22,5 +22,6 @@ setup(
     entry_points={'console_scripts': [
         'simulation_node = pillar_camera_sim.simulation_node:main',
         'keyboard_teleop = pillar_camera_sim.keyboard_teleop:main',
+        'florence2_detector = pillar_camera_sim.florence2_detector:main',
     ]},
 )

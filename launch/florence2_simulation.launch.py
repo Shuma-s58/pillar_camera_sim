@@ -1,0 +1,12 @@
+import os
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    share = get_package_share_directory('pillar_camera_sim')
+    return LaunchDescription([
+        Node(package='pillar_camera_sim', executable='simulation_node', name='pillar_camera_sim', output='screen', parameters=[os.path.join(share, 'config', 'simulation.yaml')]),
+        Node(package='pillar_camera_sim', executable='florence2_detector', name='florence2_detector', output='screen', parameters=[os.path.join(share, 'config', 'florence2.yaml')]),
+        Node(package='rviz2', executable='rviz2', arguments=['-d', os.path.join(share, 'config', 'simulation.rviz')], output='screen'),
+    ])

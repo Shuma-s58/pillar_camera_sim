@@ -1,0 +1,15 @@
+florence2_detector:
+  ros__parameters:
+    # box_mission と同じ: ROS Python と Florence-2 venv を分離
+    python: ~/florence2_work/.venv/bin/python
+    script: ~/florence2_work/florence2_phrase.py
+    model: ''  # 空なら florence2_phrase.py のデフォルト
+    device: auto
+    prompt: 'A white vertical pillar.'
+    timeout: 300.0
+    inference_period: 3.0
+    pillar_spacing: 0.66
+    focal_length_px: 700.0
+    min_box_height: 25
+    min_aspect_ratio: 2.0
+    max_new_tokens: 256
